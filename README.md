@@ -13,15 +13,16 @@ apt install flac ffmpeg -y
 Primero clone el repositorio
 
 ~~~
-$ git clone https://github.com/jcatanop/2mp3.git
+git clone https://github.com/jcatanop/2mp3.git
+cd 2mp3
 ~~~
 
-Desplácese hasta la carpeta raíz donde almacena la musica. 
+Copie los scripts en su carpeta raíz de música y luego desplácese hasta la carpeta de musica. 
 
 ~~~
-$ cp  flac2mp3.sh  Music
-$ cp m4a2mp3.sh  Music
-$ cd Music
+cp flac2mp3.sh ~/Music
+cp m4a2mp3.sh ~/Music
+cd ~/Music
 ~~~
 
 Ya ubicado en su carpeta de música, ejecute el script correspondiente, ya sea que quiera convertir archivos flac o archivos m4a.
