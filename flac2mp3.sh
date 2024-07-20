@@ -16,18 +16,8 @@ find -type f -name "*.flac" -print0 | while read -d $'\0' a; do
   flac -c -d "$a" | lame -V0 --add-id3v2 --pad-id3v2 --ignore-tag-errors \
     --ta "$ARTIST" --tt "$TITLE" --tl "$ALBUM"  --tg "${GENRE:-12}" \
     --tn "${TRACKNUMBER:-0}" --ty "$DATE" - "$OUTF"
-done
 
-echo "Remove flac files"
-rm  *.flac
-rm  */*.flac
-rm  */*/*.flac
-rm  */*/*/*.flac
-rm  */*/*/*/*.flac
-rm  */*/*/*/*/*.flac
-rm  */*/*/*/*/*/*.flac
-rm  */*/*/*/*/*/*/*.flac
-rm  */*/*/*/*/*/*/*/*.flac
-rm  */*/*/*/*/*/*/*/*/*.flac
+  rm "$a"
+done
 
 echo "Done!"
